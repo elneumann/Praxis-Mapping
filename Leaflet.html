@@ -9,20 +9,19 @@
 
 </head>
 
+<div id="mapid" style="height: 180px;"></div>
+
 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
    crossorigin=""></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="storymap.js"></script>
 <script type="text/javascript">
 
-   <div id="mapid"></div>
-
     var mymap = L.map('mapid').setView([51.505, -0.09], 13);
    
-    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox.streets',
-    accessToken: 'your.mapbox.access.token'
-    }).addTo(mymap);
+
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+                  attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+               }).addTo(mymap);
+</script>

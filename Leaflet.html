@@ -9,7 +9,7 @@
 
 </head>
 
-<div id="mapid" style="height: 180px;"></div>
+<div id="mapid" style="height: 1000px;"></div>
 
 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
@@ -18,10 +18,13 @@
 <script type="text/javascript" src="storymap.js"></script>
 <script type="text/javascript">
 
-    var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+    var mymap = L.map('mapid').setView([43.206667, -71.538056], 8);
    
 
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
                   attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
                }).addTo(mymap);
+
+   var marker = L.marker([43.924722, -71.891667]).addTo(mymap);
+
 </script>

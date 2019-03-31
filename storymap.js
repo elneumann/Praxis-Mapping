@@ -9,8 +9,8 @@
             breakpointPos: '33.333%',
             createMap: function () {
                 // create a map in the "map" div, set the view to a given place and zoom
-                var map = L.map('map').setView([28, 0], 2);
-
+                var map = L.map('map').setView([43.206667, -71.538056], 7);
+                
                 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
 	                 attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
                 }).addTo(map);
@@ -136,7 +136,7 @@
                       fg.addLayer(layer);
                     };
                     zoomTo = marker.zoom;
-                    fg.addLayer(L.marker([marker.lat, marker.lon]));
+                    //fg.addLayer(L.marker([marker.lat, marker.lon]));
                     map.flyTo([marker.lat, marker.lon], marker.zoom);
                 }
             }
